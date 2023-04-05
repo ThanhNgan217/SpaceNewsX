@@ -5,6 +5,7 @@
   --viewH : 100vh;
   --viewW : 100vw;
   --textBlue: #259CD7;
+  --ratio : calc(var(--viewW)/1440);
 }
 
 
@@ -16,54 +17,72 @@
 
 /* <logo> */
 .logo-home-header{
-  margin: 8px 0 8px 3vw;
+  /* margin: 8px 0 8px 3vw; */
+  margin-left: calc(47*var(--ratio));
+  margin-top: calc(8*var(--ratio));
+  margin-bottom: calc(9*var(--ratio));
+  margin-right: calc(61*var(--ratio));
+  height: calc(68*var(--ratio));
 }
 .logo-home-header img{
   float: left;
+  /*  */
+  height: calc(68*var(--ratio));
+  width: calc(150.81*var(--ratio));
+  /*  */
 }
 .logo-home-header p{
   float: left;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 25px;
-  line-height: 68px;
+  font-size: calc(25*var(--ratio));
+  line-height: calc(68*var(--ratio));
   color: var(--textBlue);
+  /*  */
+  width: calc(320*var(--ratio));
+  height: calc(26.98*var(--ratio));
+  /*  */
 }
 /* </logo> */
 
 /* <search bar> */
 .searchbar-home-header{
-  width: 30%;
-  margin-left: 5vw;
-  height: 65px;
-  margin-top: 8px;
+  /* width: 30%; */
+  width: calc(446*var(--ratio));
+  height: calc(31.85*var(--ratio));
+  /* height: 65px; */
+  margin: calc(25.58*var(--ratio)) calc(125*var(--ratio)) auto 0;
   color: #A0A4A8;
   font-family: 'Montserrat', sans-serif;
+  margin-top: calc(9*var(--ratio));
+}
+.searchbar-home-header input{
+  margin: 0 calc(86*var(--ratio)) calc(10*var(--ratio)) calc(9*var(--ratio));
 }
 .searchbar-home-header .searchbar-form-field{
   width: 100%;
 }
 .mat-mdc-form-field {
-  height: 65px;
+  height: calc(70*var(--ratio));
 }
 /* </search bar> */
 
 /* <Login button> */
 .header-login{
-  margin-left: 125px;
+  margin: calc(12*var(--ratio)) calc(95*var(--ratio)) calc(15*var(--ratio)) 0;
 }
 .header-login .header-login-btn{
-  width: 10vw;
-  border-radius: 36px;
+  width: calc(195*var(--ratio));
+  height: calc(58*var(--ratio));
+  border-radius: calc(36*var(--ratio));
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  margin-top: 12px;
+  font-size: calc(14*var(--ratio));
+  
 }
 .mat-mdc-outlined-button.mat-mdc-button-base {
-  height: 50px;
+  height: calc(58*var(--ratio));
 }
 /* </Login button> */
 
