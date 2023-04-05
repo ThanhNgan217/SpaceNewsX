@@ -1,0 +1,50 @@
+<!--
+<a routerLink="/login">
+  Login
+</a>
+<router-outlet></router-outlet> -->
+<!-- <app-login></app-login> -->
+
+<div class="home-container">
+  <!-- Header -->
+  <header class="home-header">
+    <!-- Logo -->
+    <div class="logo-home-header">
+        <img src="/assets/img/logo.png"/>
+        <p class="tma-text">NEWS DC19 PROGRAM 1</p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="searchbar-home-header">
+      <mat-form-field class="searchbar-form-field" appearance="fill">
+        <input matInput type="text" placeholder="Search by topic, website, or RSS link">
+        <button matSuffix mat-icon-button aria-label="Search" fontIcon="search">
+          <mat-icon style="color: #259CD7;">search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <!-- Login/Avatar (maybe use guard and custom service)-->
+    <div class="header-login">
+        <!-- <a class="header-login-btn" mat-stroked-button routerLink="login">LOGIN</a> -->
+        <button class="header-login-btn" mat-stroked-button routerLink="login" routerLinkActive="active">
+          LOGIN
+        </button>
+
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <div class="home-slider">
+
+  </div>
+
+  <!-- Content -->
+
+
+  <!-- Footer -->
+  <footer class="home-footer">
+
+  </footer>
+</div>
+<router-outlet></router-outlet>

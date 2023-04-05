@@ -1,0 +1,75 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --viewH : 100vh;
+  --viewW : 100vw;
+  --textBlue: #259CD7;
+}
+
+
+/* <Header> */
+.home-header{
+  display: flex;
+  background-color: #F2FBFF;
+}
+
+/* <logo> */
+.logo-home-header{
+  margin: 8px 0 8px 3vw;
+}
+.logo-home-header img{
+  float: left;
+}
+.logo-home-header p{
+  float: left;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 68px;
+  color: var(--textBlue);
+}
+/* </logo> */
+
+/* <search bar> */
+.searchbar-home-header{
+  width: 30%;
+  margin-left: 5vw;
+  height: 65px;
+  margin-top: 8px;
+  color: #A0A4A8;
+  font-family: 'Montserrat', sans-serif;
+}
+.searchbar-home-header .searchbar-form-field{
+  width: 100%;
+}
+.mat-mdc-form-field {
+  height: 65px;
+}
+/* </search bar> */
+
+/* <Login button> */
+.header-login{
+  margin-left: 125px;
+}
+.header-login .header-login-btn{
+  width: 10vw;
+  border-radius: 36px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 12px;
+}
+.mat-mdc-outlined-button.mat-mdc-button-base {
+  height: 50px;
+}
+/* </Login button> */
+
+
+/* </Header> */
+
+
+
+
