@@ -28,6 +28,7 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
 .header-login .mat-mdc-outlined-button:not(:disabled) {
   color: #259cd7;
 }
+
 .header-login .mat-mdc-outlined-button:not(:disabled) {
   border-color: #259cd7;
   border-width: 2px;

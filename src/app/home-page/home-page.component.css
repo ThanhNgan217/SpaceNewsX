@@ -58,19 +58,24 @@
   margin-top: calc(9*var(--ratio));
 }
 .searchbar-home-header input{
+  font-size: calc(16*var(--ratio));
   margin: 0 calc(86*var(--ratio)) calc(10*var(--ratio)) calc(9*var(--ratio));
 }
 .searchbar-home-header .searchbar-form-field{
   width: 100%;
 }
 .mat-mdc-form-field {
-  height: calc(70*var(--ratio));
+  height: calc(68*var(--ratio));
+}
+.searchbar-home-header button{
+  padding-top: 5px;
 }
 /* </search bar> */
 
 /* <Login button> */
 .header-login{
-  margin: calc(12*var(--ratio)) calc(95*var(--ratio)) calc(15*var(--ratio)) 0;
+  /* margin-right:calc(95*var(--ratio)) */
+  margin: calc(12*var(--ratio)) calc(75*var(--ratio)) calc(15*var(--ratio)) 0;
 }
 .header-login .header-login-btn{
   width: calc(195*var(--ratio));
@@ -79,15 +84,23 @@
   font-style: normal;
   font-weight: 500;
   font-size: calc(14*var(--ratio));
-  
+
 }
 .mat-mdc-outlined-button.mat-mdc-button-base {
   height: calc(58*var(--ratio));
 }
 /* </Login button> */
 
-
 /* </Header> */
+
+/* <Slider> */
+.home-slider{
+  width: 100%;
+  height: calc(670*var(--ratio));
+  background-color: #A0A4A8;
+}
+/* </Slider> */
+
 
 
 

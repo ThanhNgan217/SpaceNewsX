@@ -12,12 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { SilderComponent } from './silder/silder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomePageComponent
+    HomePageComponent,
+    SilderComponent
   ],
   imports: [
     BrowserModule,
