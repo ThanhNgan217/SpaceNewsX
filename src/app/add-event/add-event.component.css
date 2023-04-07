@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --viewH : 100vh;
+  --viewW : 100vw;
+  --blue: #259CD7;
+  --ratio : calc(var(--viewW)/1160);
+  font-family: "Fira Sans", sans-serif;
+}
+
+/* Logo */
+.logo-block{
+  height: calc(86*var(--ratio));
+  margin: calc(50*var(--ratio)) 0 0 calc(50*var(--ratio));
+  position: relative;
+  width: calc(471*var(--ratio));
+  height: calc(68*var(--ratio));
+}
+.logo-block img{
+  width: calc(150.81*var(--ratio));
+  height: calc(68*var(--ratio));
+  float: left;
+}
+.logo-block p{
+  float: left;
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(25*var(--ratio));
+  line-height: calc(68*var(--ratio));
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: var(--blue);
+}

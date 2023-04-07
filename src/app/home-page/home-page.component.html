@@ -5,25 +5,24 @@
 <router-outlet></router-outlet> -->
 <!-- <app-login></app-login> -->
 
-<div class="home-container">
+<div class="main-container">
   <!-- Header -->
-  <header class="home-header">
+  <header class="main-header">
     <!-- Logo -->
-    <div class="logo-home-header">
+    <div class="logo-main-header">
         <img src="/assets/img/logo.png"/>
         <p class="tma-text">NEWS DC19 PROGRAM 1</p>
     </div>
 
     <!-- Search bar -->
-    <div class="searchbar-home-header">
+    <div class="searchbar-main-header">
       <mat-form-field class="searchbar-form-field" appearance="fill">
         <input matInput type="text" placeholder="Search by topic, website, or RSS link">
         <button matSuffix mat-icon-button aria-label="Search" fontIcon="search">
-          <mat-icon style="color: #259CD7;">search</mat-icon>
+          <mat-icon>search</mat-icon>
         </button>
       </mat-form-field>
     </div>
-
     <!-- Login/Avatar (maybe use guard and custom service)-->
     <div class="header-login">
         <!-- <a class="header-login-btn" mat-stroked-button routerLink="login">LOGIN</a> -->
@@ -36,16 +35,18 @@
   </header>
 
   <!-- Slider -->
-  <div class="home-slider">
+  <div class="main-slider">
     <app-silder></app-silder>
   </div>
 
   <!-- Content -->
+  <div class="content-container">
 
+  </div>
 
   <!-- Footer -->
-  <footer class="home-footer">
-
+  <footer class="main-footer">
+    <p class="footer-text">Privacy Policy / Personal Information / Term of Service</p>
   </footer>
 </div>
 <router-outlet></router-outlet>

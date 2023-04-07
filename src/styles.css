@@ -4,13 +4,13 @@ html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; }
 
 /* input login page */
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+.login-form .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: #FAF9F7;
 }
 .mdc-text-field--filled .mdc-line-ripple::after {
   border-bottom-color: var(--mdc-theme-primary, #259CD7);
 }
-.mat-mdc-form-field-focus-overlay {
+.login-form .mat-mdc-form-field-focus-overlay {
   background-color: #FAF9F7
 }
 
@@ -23,22 +23,9 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
   border-bottom-color: #259CD7;
   border-width: 3px;
 }
-
-/* Button Login in main page */
-.header-login .mat-mdc-outlined-button:not(:disabled) {
-  color: #259cd7;
+.searchbar-form-field .mat-mdc-form-field-focus-overlay {
+  background-color: #FAF9F7
 }
 
-.header-login .mat-mdc-outlined-button:not(:disabled) {
-  border-color: #259cd7;
-  border-width: 2px;
-}
-.header-login .mat-mdc-outlined-button {
-  --mat-mdc-button-persistent-ripple-color: #F2FBFF;
-}
-.mat-mdc-outlined-button {
-  --mat-mdc-button-persistent-ripple-color: #3194ce;
-  --mat-mdc-button-ripple-color: rgba(163, 207, 228, 0.1);
-}
 
 

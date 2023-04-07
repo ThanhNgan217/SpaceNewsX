@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { count } from 'rxjs';
 
 @Component({
@@ -26,39 +26,33 @@ export class SilderComponent {
   urlShow = this.listEvent[this.index].url
   counter = this.listEvent.length;
 
+  ngOnInit(){
+    setInterval(() => {
+      if(this.index == this.counter-1) this.index = 0;
+      else this.index++;
+
+      this.idShow = this.listEvent[this.index].id;
+      this.urlShow = this.listEvent[this.index].url
+    }, 4000);
+
+  }
+
+
   // constructor(public timer: ReturnType<typeof setTimeout>){
   // }
   changeImg(){
+    clearInterval;
     for (let e of this.listEvent){
       if(e.id == this.idShow) this.urlShow = e.url;
     }
   }
-
-  // timer = setTimeout((idShow:number, urlShow:string, index: number, counter:number, listEvent:any) => {
-  //   if(index == counter-1){
-  //     index = 0;
-  //   }
-  //   index++;
-  //   idShow = listEvent[index].id; // 1
-  //   urlShow = listEvent[index].url
-  // }, 2000);
-
-  // let timer: ReturnType<typeof setTimeout> = setTimeout((idShow:number, urlShow:string, index: number, counter:number, listEvent) => {
-  //   if(index == counter-1){
-  //     index = 0;
-  //   }
-  //   index++;
-  //   idShow = listEvent[index].id; // 1
-  //   urlShow = listEvent[index].url
-  // }, 5000);
-
-  // clearTimeout(timer);
-
   toEvent(id:number){
+    clearInterval;
     this.idShow = id;
     this.changeImg();
   }
   toPrev(){
+    clearInterval;
     if(this.index == 0) this.index = this.counter-1;
     else this.index--;
 
@@ -66,6 +60,7 @@ export class SilderComponent {
     this.urlShow = this.listEvent[this.index].url
   }
   toNext(){
+    clearInterval;
     if(this.index == this.counter-1) this.index = 0;
     else this.index++;
 

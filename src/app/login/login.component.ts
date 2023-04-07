@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ApiService } from "../api-service.service";
 import {
   FormBuilder,
   FormControl,
@@ -14,18 +15,17 @@ import {
 })
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
-    emailAddress: new FormControl(''),
-    password: new FormControl(''),
+    emailAddress: new FormControl<string>(''),
+    password: new FormControl<string>(''),
 
   });
 
 
-
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private apiServide: ApiService) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      emailAddress: [
+      emailAddress:[
         "",
         Validators.compose([
           Validators.required,
@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit {
       password: [
         "",
         Validators.compose([
-          Validators.required,
-          Validators.minLength(6),
+          Validators.required
+          //Validators.minLength(6),
           // Validators.pattern(/^(?=.*[!@#$%^&*]+)[a-z0-9!@#$%^&*]{6,32}$/)
         ])
       ],
@@ -47,7 +47,20 @@ export class LoginComponent implements OnInit {
     new FormControl("", Validators.required);
   }
   onSubmit(): void {
-    console.log(this.loginForm.get('emailAddress'));
+    let username = this.loginForm.get('emailAddress')?.value;
+    let password = this.loginForm.get('password')?.value;
+    // console.log(typeof username);
+    // console.log(typeof password);
+
+    this.apiServide.login(username, password).subscribe(()=>{
+      // console.log('hello word')
+    },
+    // err => {
+    //   console.log(err.message);
+    // }, () => {
+    //   console.log('completed');
+    // }
+    );
   }
 
   get emailAddress(){

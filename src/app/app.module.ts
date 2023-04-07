@@ -13,13 +13,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SilderComponent } from './silder/silder.component';
+import { AddEventComponent } from './add-event/add-event.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomePageComponent,
-    SilderComponent
+    SilderComponent,
+    AddEventComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { SilderComponent } from './silder/silder.component';
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

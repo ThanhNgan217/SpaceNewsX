@@ -4,7 +4,7 @@
   box-sizing: border-box;
   --viewH : 100vh;
   --viewW : 100vw;
-  --textBlue: #259CD7;
+  --blue: #259CD7;
   --ratio : calc(var(--viewW)/1440);
 }
 
@@ -41,7 +41,7 @@
   height: 10px;
   border-radius: 50%;
   background-color: none;
-  border: #259CD7 solid 2px;
+  border: var(--blue) solid 2px;
   margin: 0 calc(18*var(--ratio));
 }
 .span-nav:hover, .slider-icon{
@@ -75,7 +75,7 @@
 .slider-icon mat-icon{
   width: 50px;
   height: 50px;
-  color: #259CD7;
+  color: var(--blue);
 
   font-size: 50px;
   position: absolute;
@@ -84,3 +84,5 @@
   left:50%;
   transform:translate(-50%,0%);
 }
+
+
