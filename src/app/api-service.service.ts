@@ -6,22 +6,23 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  apiUrl = 'https://localhost:7136';
+  private apiUrl = 'https://localhost:7136';
+  // private apiUrl = 'http://localhost:3000/login';
 
-  headers= new HttpHeaders()
-  .set('content-type', 'application/json')
-  .set('accept','*/*');
+
+  private httpOptions = {
+    headers : new HttpHeaders({'Content-Type': 'application/json'})
+  };
 
   constructor(private http:HttpClient) { }
 
   login(Username:string|null|undefined, Password:string|null|undefined){
     let user = {
-      userName: Username,
+      username: Username,
       password: Password
     }
     let json = JSON.stringify(user);
     console.log( json)
-    return this.http.post<any>(`${this.apiUrl}/api/Auth/login`, json , { 'headers': this.headers })
-    // , { 'headers': this.headers }
+    return this.http.post<any>(`${this.apiUrl}/api/Auth/login`, json , this.httpOptions)
   }
 }
