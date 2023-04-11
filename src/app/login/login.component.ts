@@ -1,17 +1,19 @@
 import { Component, OnInit } from "@angular/core";
-import { ApiService } from "../api-service.service";
+import { ApiService } from "../Service/api-service.service";
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators
 } from "@angular/forms";
+import { User } from "./user";
+
 // import { NoWhitespaceValidator } from "../validators/no-whitespace.validator";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-   styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
@@ -49,18 +51,17 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     let username = this.loginForm.get('emailAddress')?.value;
     let password = this.loginForm.get('password')?.value;
-    // console.log(typeof username);
-    // console.log(typeof password);
 
-    this.apiServide.login(username, password).subscribe(()=>{
-      // console.log('hello word')
+    let user :User = {
+      username : username,
+      password : password
+    }
+    this.apiServide.login(user).subscribe(()=>{
+      alert("success");
     },
-    // err => {
-    //   console.log(err.message);
-    // }, () => {
-    //   console.log('completed');
-    // }
+
     );
+    // this.apiServide.getPost().subscribe((data)=>{console.log(data)});
   }
 
   get emailAddress(){

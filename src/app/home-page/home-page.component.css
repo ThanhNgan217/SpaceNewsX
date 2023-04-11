@@ -5,6 +5,8 @@
   --viewH : 100vh;
   --viewW : 100vw;
   --blue: #259CD7;
+  --grey : #F5F5F5;
+  --white : #FFFF;
   --ratio : calc(var(--viewW)/1440);
 }
 
@@ -128,16 +130,40 @@
 
 /* <main-content> */
 .content-container{
-  height: 200px;
+  /* height: 210px; */
   width: 100%;
+  height: calc(1275*var(--ratio));
+  background-color: var(--grey);
+  margin-bottom: calc(15*var(--ratio));
 }
+.content-block-left{
+  position: relative;
+  float: left;
+  top : calc(15*var(--ratio));
+  left: 0;
+  bottom: 0;
+  width: calc(980*var(--ratio));
+  height: calc(1275*var(--ratio));
+}
+.content-block-right{
+  position: relative;
+  float: left;
+  top : calc(15*var(--ratio));
+  bottom : calc(15*var(--ratio));
+  margin-left: calc(20*var(--ratio));
+  width: calc(420*var(--ratio));
+  height: calc(1275*var(--ratio));
+}
+/* calendar */
+
 /* </main-content> */
 
 /* <main-footer> */
 .main-footer{
-  position: absolute;
+  position: relative;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   height: calc(100*var(--ratio));
   background-color: var(--blue);
 }

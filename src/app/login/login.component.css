@@ -9,6 +9,12 @@
   --ratio : calc(var(--viewW)/1440);
 }
 
+.login-page-container{
+  background-color: var(--grey);
+  width: var(--viewW);
+  height: var(--viewH);
+}
+
 .block-left{
   float: left;
   width: calc(1000*var(--ratio));
@@ -19,7 +25,7 @@
 .block-right{
   position: relative;
   float: right;
-  width: calc(440*var(--ratio));
+  width: calc(420*var(--ratio));
   height: var(--viewH);
   background-color: var(--blue);
   font-family: "Fira Sans", sans-serif;
@@ -31,17 +37,23 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: var(--blue);
+
 }
 .welcome-block h3{
   font-weight: 600;
   font-size: calc(32*var(--ratio));
   line-height: calc(42*var(--ratio));
+  background-color: var(--blue);
+
 }
 .welcome-block p{
   margin: calc(12*var(--ratio)) 0 calc(119*var(--ratio)) 0;
   width: 100%;
   font-size: calc(18*var(--ratio));
   line-height: calc(24*var(--ratio));
+  background-color: var(--blue);
+
 }
 
 /* logo */

@@ -2,19 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { SilderComponent } from './silder/silder.component';
 import { LoginComponent } from './login/login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventListComponent } from './event-list/event-list.component';
+// import { ListPostComponent } from './list-post/list-post.component';
+import { AddEventComponent } from './add-event/add-event.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { HomePageComponent } from './home-page/home-page.component';
-import { SilderComponent } from './silder/silder.component';
-import { AddEventComponent } from './add-event/add-event.component';
-import { HttpClientModule } from '@angular/common/http';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HomePageComponent,
     SilderComponent,
-    AddEventComponent
+    AddEventComponent,
+    PageNotFoundComponent,
+    EventListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
+    MatChipsModule,
+    MatButtonToggleModule,
     AppRoutingModule,
     HttpClientModule
   ],

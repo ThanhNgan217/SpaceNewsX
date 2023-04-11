@@ -1,10 +1,3 @@
-<!--
-<a routerLink="/login">
-  Login
-</a>
-<router-outlet></router-outlet> -->
-<!-- <app-login></app-login> -->
-
 <div class="main-container">
   <!-- Header -->
   <header class="main-header">
@@ -27,10 +20,9 @@
     <div class="header-login">
         <!-- <a class="header-login-btn" mat-stroked-button routerLink="login">LOGIN</a> -->
         <!-- routerLink="login" routerLinkActive="active" -->
-        <button class="header-login-btn" mat-stroked-button >
+        <button class="header-login-btn" mat-stroked-button routerLink="login">
           LOGIN
         </button>
-
     </div>
   </header>
 
@@ -41,6 +33,20 @@
 
   <!-- Content -->
   <div class="content-container">
+    <div class="content-block-left">
+      <!-- ListPost conponent -->
+      <app-event-list></app-event-list>
+      <!-- CLICK A POST -->
+        <!-- Post component -->
+    </div>
+    <div class="content-block-right">
+      <!-- NO LOGIN : CALENDAR -->
+      <div class="calendar">
+
+      </div>
+      <!-- LOGIN : calendar & favorite -->
+    </div>
+
 
   </div>
 
@@ -49,4 +55,6 @@
     <p class="footer-text">Privacy Policy / Personal Information / Term of Service</p>
   </footer>
 </div>
-<router-outlet></router-outlet>
+<router-outlet>
+
+</router-outlet>

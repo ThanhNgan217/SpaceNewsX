@@ -10,6 +10,9 @@ export class HomePageComponent {
   constructor(private router : Router){}
 
   toLogin(){
-    // this.router.navigate(['/login']);
+    this.router.navigate(['/login']);
   }
+  // navLogin(){
+  //    navigateByUrl(url: string | UrlTree, extras: NavigationExtras = { skipLocationChange: false }): Promise<boolean>;
+  // }
 }

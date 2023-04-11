@@ -3,6 +3,17 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; }
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --viewH : 100vh;
+  --viewW : 100vw;
+  --blue: #259CD7;
+  --grey : #F5F5F5;
+  --white : #FFFF;
+  --ratio : calc(var(--viewW)/1440);
+}
 /* input login page */
 .login-form .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: #FAF9F7;
@@ -27,5 +38,14 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
   background-color: #FAF9F7
 }
 
-
+/* Topic list */
+.mat-button-toggle .mat-button-toggle-ripple{
+  display: none;
+}
+/* .mat-button-toggle .mat-button-toggle-label-content{
+  padding: 0;
+  line-height: calc(60*var(--ratio));
+  text-align: center;
+  font-size: 14px;
+} */
 
