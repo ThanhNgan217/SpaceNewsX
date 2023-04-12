@@ -145,6 +145,45 @@
   width: calc(980*var(--ratio));
   height: calc(1275*var(--ratio));
 }
+/* Topic List */
+.list-topic{
+  position: relative;
+  background-color: white;
+  width: calc(980*var(--ratio));
+  height: calc(70*var(--ratio));
+}
+.chips-list{
+  position: absolute;
+  display: flex;
+  border: none;
+  margin: calc(5*var(--ratio)) 0;
+  width: 100%;
+  height: calc(60*var(--ratio));
+}
+.chips-list .chip{
+  position: relative;
+  display: inline-block;
+  width: calc(100*var(--ratio));
+  height: calc(60*var(--ratio));
+  margin-left: calc(30*var(--ratio));
+  line-height: calc(60*var(--ratio));
+  text-align: center;
+  border: var(--blue) solid 2px;
+  border-radius: calc(36*var(--ratio));
+  background-color: #FAF9F7;
+  color: var(--blue);
+  font-size: calc(14*var(--ratio));
+  font-weight: 600;
+}
+.chips-list .chip:hover{
+  cursor: pointer;
+}
+.chips-list .topic-checked{
+  background-color: #B2E5FE;
+}
+
+
+
 .content-block-right{
   position: relative;
   float: left;

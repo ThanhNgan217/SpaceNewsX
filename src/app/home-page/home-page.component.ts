@@ -9,6 +9,25 @@ import { Router } from '@angular/router';
 export class HomePageComponent {
   constructor(private router : Router){}
 
+  ListTopic = [
+    {
+      id : 1,
+      subject : 'Subject 1'
+    },
+    {
+      id : 2,
+      subject : 'Subject 2'
+    },
+    {
+      id : 3,
+      subject : 'Subject 3'
+    },
+  ]
+  topicChecked = 0;
+
+  topicChange(value : number){
+    this.topicChecked = value;
+  }
   toLogin(){
     this.router.navigate(['/login']);
   }

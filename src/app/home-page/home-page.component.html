@@ -35,7 +35,15 @@
   <div class="content-container">
     <div class="content-block-left">
       <!-- ListPost conponent -->
-      <app-event-list></app-event-list>
+      <div class="list-topic">
+        <div class="chips-list">
+          <button class="chip" [class.topic-checked]="topicChecked == 0" (click)="topicChange(0)" [value]="0">All</button>
+          <div class="ngForList" *ngFor="let t of ListTopic">
+            <button class="chip"[value]="t.id" (click)="topicChange(t.id)" [class.topic-checked]="topicChecked == t.id">{{t.subject}}</button>
+          </div>
+        </div>
+      </div>
+      <app-event-list [topicChecked] = "topicChecked"></app-event-list>
       <!-- CLICK A POST -->
         <!-- Post component -->
     </div>

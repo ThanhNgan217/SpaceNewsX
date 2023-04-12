@@ -1,37 +1,58 @@
-<div class="list-topic">
+<!-- <div class="list-topic">
   <div class="chips-list">
     <button class="chip" [class.topic-checked]="topicChecked == 0" (click)="topicChange(0)" [value]="0">All</button>
     <div class="ngForList" *ngFor="let t of ListTopic">
       <button class="chip"[value]="t.id" (click)="topicChange(t.id)" [class.topic-checked]="topicChecked == t.id">{{t.subject}}</button>
     </div>
-    <!-- <p>{{topicChecked}}</p> -->
   </div>
-
-    <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style" >
-      <mat-button-toggle [class.mat-button-toggle-checked]="allTopic == 0" (change)="topicChange(0)" [value]="0">All</mat-button-toggle>
-      <div class="ngForList" *ngFor="let t of ListTopic">
-        <mat-button-toggle [value]="t.id" (change)="topicChange(t.id)" [class.mat-button-toggle-checked]="allTopic == t.id">{{t.subject}}</mat-button-toggle>
-      </div>
-      <p>{{allTopic}}</p>
-    </mat-button-toggle-group> -->
-
-</div>
+</div> -->
 <div class="list-event">
-  <div class="list-post">
-    <div class="post-xontainer" *ngFor="let p of ListPosts">
-      <div class="post">
-        <img src="{{p.url}}">
-        <p class="list-post-title">{{p.title}}</p>
-        <p class="list-post-description">{{p.time | date:'mediumDate'}}  {{p.author}}  {{p.counter}}</p>
-        <div class="post-icon">
-          <!-- <mat-icon>star_border</mat-icon> -->
+  <!-- <div *ngIf="topicChecked == 0; else subjectTopic"> -->
+    <div class="list-post">
+      <div class="post-container" *ngFor="let p of posts">
+        <div class="post">
+          <img src="{{p.url}}">
+          <p class="list-post-title">{{p.title}}</p>
+          <pre class="list-post-description">{{p.time | date:'mediumDate'}}    {{p.author}}    {{p.counter}}</pre>
+          <div class="post-icon">
+            <mat-icon>star_border</mat-icon>
+            <mat-icon>share</mat-icon>
+            <mat-icon>more_vert</mat-icon>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 
+  <!-- <ng-template #subjectTopic>
+    <div class="list-post">
+      <div class="post-container" *ngFor="let p of ListPosts">
+        <div *ngIf="p.idTopic == topicChecked">
+          <div class="post">
+            <img src="{{p.url}}">
+            <p class="list-post-title">{{p.title}}</p>
+            <pre class="list-post-description">{{p.time | date:'mediumDate'}}    {{p.author}}    {{p.counter}}</pre>
+            <div class="post-icon">
+              <mat-icon>star_border</mat-icon>
+              <mat-icon>share</mat-icon>
+              <mat-icon>more_vert</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template> -->
 
-  <div class="paginator">
-
+  <div class="block-paginator">
+    <div class="paginator">
+      <div class="paginator-icon pag-prev" ><mat-icon>arrow_back_ios</mat-icon></div>
+      <div class="paginator-icon pag-next" ><mat-icon>arrow_forward_ios</mat-icon></div>
+      <div class="num-page-block">
+        <button class="num-page">1</button>
+        <button class="num-page">2</button>
+        <button class="num-page">3</button>
+        <button class="num-page">...</button>
+      </div>
+    </div>
   </div>
 </div>
