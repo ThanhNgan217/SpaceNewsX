@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', sans-serif; }
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --viewH : 100vh;
+  --viewW : 100vw;
+  --blue: #259CD7;
+  --grey : #F5F5F5;
+  --white : #FFFF;
+  --ratio : calc(var(--viewW)/1440);
+}
+/* input login page */
+.login-form .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #FAF9F7;
+}
+.mdc-text-field--filled .mdc-line-ripple::after {
+  border-bottom-color: var(--mdc-theme-primary, #259CD7);
+}
+.login-form .mat-mdc-form-field-focus-overlay {
+  background-color: #FAF9F7
+}
+
+
+/* search bar main page */
+.searchbar-form-field .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #F2FBFF;
+}
+.searchbar-form-field .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+  border-bottom-color: #259CD7;
+  border-width: 3px;
+}
+.searchbar-form-field .mat-mdc-form-field-focus-overlay {
+  background-color: #FAF9F7
+}
+
+/* Topic list */
+.mat-button-toggle .mat-button-toggle-ripple{
+  display: none;
+}

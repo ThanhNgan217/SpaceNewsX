@@ -1,0 +1,69 @@
+<div class="main-container">
+  <!-- Header -->
+  <header class="main-header">
+    <!-- Logo -->
+    <div class="logo-main-header">
+        <img src="/assets/img/logo.png"/>
+        <p class="tma-text">NEWS DC19 PROGRAM 1</p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="searchbar-main-header">
+      <mat-form-field class="searchbar-form-field" appearance="fill">
+        <input matInput type="text" placeholder="Search by topic, website, or RSS link">
+        <button matSuffix mat-icon-button aria-label="Search" fontIcon="search">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <!-- Login/Avatar (maybe use guard and custom service)-->
+    <div class="header-login">
+        <!-- <a class="header-login-btn" mat-stroked-button routerLink="login">LOGIN</a> -->
+        <!-- routerLink="login" routerLinkActive="active" -->
+        <button class="header-login-btn" mat-stroked-button routerLink="login">
+          LOGIN
+        </button>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <div class="main-slider">
+    <!-- <app-silder></app-silder> -->
+  </div>
+
+  <!-- Content -->
+  <div class="content-container">
+    <div class="content-block-left">
+      <!-- ListPost conponent -->
+      <div class="list-topic">
+        <div class="chips-list">
+          <button class="chip" [class.topic-checked]="topicChecked == 0" (click)="topicChange(0)" [value]="0">All</button>
+          <div class="ngForList" *ngFor="let t of ListTopic">
+            <button class="chip"[value]="t.id" (click)="topicChange(t.id)" [class.topic-checked]="topicChecked == t.id">{{t.subject}}</button>
+          </div>
+        </div>
+      </div>
+      <!-- <app-event-list [topicChecked] = "topicChecked"></app-event-list> -->
+      <!-- CLICK A POST -->
+        <!-- Post component -->
+    </div>
+    <div class="content-block-right">
+      <!-- NO LOGIN : CALENDAR -->
+      <div class="calendar">
+
+      </div>
+      <!-- LOGIN : calendar & favorite -->
+    </div>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p class="footer-text">Privacy Policy / Personal Information / Term of Service</p>
+  </footer>
+</div>
+<router-outlet>
+
+</router-outlet>
+
