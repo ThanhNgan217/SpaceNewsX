@@ -9,18 +9,22 @@ import { EventListComponent } from './event-list/event-list.component';
 // import { ListPostComponent } from './list-post/list-post.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PostComponent } from './post/post.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     SilderComponent,
     AddEventComponent,
     PageNotFoundComponent,
-    EventListComponent
+    EventListComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,8 +47,13 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatIconModule,
     MatChipsModule,
     MatButtonToggleModule,
+    MatDatepickerModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatCardModule,
+    MatNativeDateModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -34,4 +34,7 @@ export class HomePageComponent {
   // navLogin(){
   //    navigateByUrl(url: string | UrlTree, extras: NavigationExtras = { skipLocationChange: false }): Promise<boolean>;
   // }
+
+
+
 }

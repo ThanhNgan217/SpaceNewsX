@@ -4,16 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
     path: 'addevent',
     component: AddEventComponent
-  }
+  },
+  {
+    path: ':id',
+    component: PostComponent
+  },
+
 
 ];
 
