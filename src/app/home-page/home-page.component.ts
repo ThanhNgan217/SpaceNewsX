@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
 @Component({
   selector: 'app-home-page',
@@ -7,7 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
-  constructor(private router : Router){}
+  bsInlineValue = new Date();
+  bsInlineRangeValue: Date[];
+  maxDate = new Date();
+  bsConfig?: Partial<BsDatepickerConfig> = Object.assign({}, {
+    containerClass: 'theme-default',
+    showWeekNumbers: false,
+    // datePickerHead :'S, M, T, W, T, F, S'
+  });
+
+  constructor(private router : Router) {
+    this.maxDate.setDate(this.maxDate.getDate() + 7);
+    this.bsInlineRangeValue = [this.bsInlineValue, this.maxDate];
+  }
 
   ListTopic = [
     {

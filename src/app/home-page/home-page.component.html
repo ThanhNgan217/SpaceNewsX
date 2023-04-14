@@ -50,11 +50,8 @@
     </div>
     <div class="content-block-right">
       <!-- NO LOGIN : CALENDAR -->
-      <div class="calendar">
-        <mat-card>
-          <mat-calendar></mat-calendar>
-          <!-- <datepicker-custom-header-example></datepicker-custom-header-example> -->
-        </mat-card>
+      <div class="calendar"  >
+          <bs-datepicker-inline id ="customcalendar" [bsValue]="bsInlineValue" [bsConfig]="bsConfig"></bs-datepicker-inline>
       </div>
       <!-- LOGIN : calendar & favorite -->
     </div>

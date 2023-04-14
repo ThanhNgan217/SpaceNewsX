@@ -191,15 +191,16 @@
   right: 0;
   bottom : calc(15*var(--ratio));
   margin-left: calc(20*var(--ratio));
-  width: calc(420*var(--ratio));
+  min-width: calc(420*var(--ratio));
   height: calc(1275*var(--ratio));
 }
 /* calendar */
 .calendar{
   background-color: white;
-  width: calc(440*var(--ratio));
+  min-width: calc(420*var(--ratio));
   height: calc(410*var(--ratio));
 }
+
 /* </main-content> */
 
 /* <main-footer> */
